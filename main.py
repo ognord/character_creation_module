@@ -3,6 +3,7 @@ from graphic_arts.start_game_banner import run_screensaver
 
 
 def attack(char_name: str, char_class: str) -> str:
+    """Attack."""
     attack_dict: dict = {
         'warrior': (3, 5),
         'mage': (5, 10),
@@ -17,6 +18,7 @@ def attack(char_name: str, char_class: str) -> str:
 
 
 def defence(char_name: str, char_class: str) -> str:
+    """Defend."""
     defence_dict = {
         'warrior': (5, 10),
         'mage': (-2, 2),
@@ -31,6 +33,7 @@ def defence(char_name: str, char_class: str) -> str:
 
 
 def special(char_name: str, char_class: str) -> str:
+    """Run special skill."""
     special_dict = {
         'warrior': ('Выносливость', 105),
         'mage': ('Атака', 45),
@@ -46,10 +49,11 @@ def special(char_name: str, char_class: str) -> str:
 
 
 def start_training(char_name: str, char_class: str) -> str:
+    """Start training."""
     start_dict = {
         'warrior': 'ты Воитель — отличный боец ближнего боя.',
         'mage': 'ты Маг — превосходный укротитель стихий.',
-        'healer': 'ты Лекарь — чародей, способный исцелять раны.'
+        'healer': 'ты Лекарь — чародей, способный исцелять раны.',
 
     }
     if char_class in start_dict:
@@ -75,6 +79,7 @@ def start_training(char_name: str, char_class: str) -> str:
 
 
 def choice_char_class() -> str:
+    """Provide choice to choose char class."""
     approve_choice: str = ''
     char_class: str = ''
     while approve_choice != 'y':
